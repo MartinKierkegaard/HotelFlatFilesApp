@@ -8,10 +8,17 @@ namespace HotelFlatFilesApp
 {
     class Room
     {
+        //Record layout
+        //1-3 RoomNo
+        //4-6 Hotelno
+        //7-7 RoomType
+        //8-12 Price
+
         public Room()
         {
 
         }
+
         public int RoomNo { get; set; }
         public int HotelNo { get; set; }
         public RoomType Types { get; set; }
