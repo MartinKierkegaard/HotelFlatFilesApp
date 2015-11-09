@@ -106,6 +106,10 @@ namespace HotelFlatFilesApp
             //errorRoomData or errorBookingData
 
 
+            //exercise 9
+            //create a method for the booking  so that you can generate a line of flatdata that 
+            //matches the recordlayout 
+
             Console.ReadLine();
         }
     }
