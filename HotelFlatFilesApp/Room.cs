@@ -65,10 +65,10 @@ namespace HotelFlatFilesApp
         /// a method that takes a string of length 12
         /// and parse it to a Room object
         /// Record layout for Room
-        //  1-3 RoomNo
-        //  4-6 Hotelno
-        //  7-7 RoomType
-        //  8-12 Price
+        ///  1-3 RoomNo
+        ///  4-6 Hotelno
+        ///  7-7 RoomType
+        ///  8-12 Price
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
@@ -76,11 +76,7 @@ namespace HotelFlatFilesApp
         {
             Console.WriteLine("input: "+ input);
             Console.WriteLine("Length: "+ input.Length);
-            //if (input.Length != 12)
-            //{
-            //    return false;
-            //}
-
+           
             var myParsedRoom = new Room();
 
             string roomNo = input.Substring(0, 3);
