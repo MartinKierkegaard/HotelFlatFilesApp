@@ -95,10 +95,12 @@ namespace HotelFlatFilesApp
             //exercise 6
             //create a method that takes a textstring and parse the data to a Room Object
             //Remember to look at the recordlayout , use the method Substring to cut the textsstring in pieces
+            //put the result in a List<Room>
 
             //exercise 7
             //create a method that takes a textstring and parse the data to a Booking Object
-            //remember to look at the recordlayout 
+            //remember to look at the recordlayout
+            //Put the result in a List<Booking> 
 
             //exercise 8
             //add data with error to the flatBookingdata and the flatRoomData
