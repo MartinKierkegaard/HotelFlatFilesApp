@@ -25,41 +25,41 @@ namespace HotelFlatFilesApp
         public int Price { get; set; }
 
 
-        public static bool TryParse(string input, out Room room)
-        {
-            var myParsedRoom = new Room();
+        //public static bool TryParse(string input, out Room room)
+        //{
+        //    var myParsedRoom = new Room();
 
-            room = null;
-            string roomNo = input.Substring(1, 3);
-            string hotelNo = input.Substring(4, 3);
-            string roomType = input.Substring(7, 1);
-            string price = input.Substring(8, 5);
+        //    room = null;
+        //    string roomNo = input.Substring(1, 3);
+        //    string hotelNo = input.Substring(4, 3);
+        //    string roomType = input.Substring(7, 1);
+        //    string price = input.Substring(8, 5);
 
-            int roomNoResult;
-            bool roomOk = Int32.TryParse(roomNo, out roomNoResult);
+        //    int roomNoResult;
+        //    bool roomOk = Int32.TryParse(roomNo, out roomNoResult);
 
-            int hotelNoResult;
-            bool hotelNoOk = Int32.TryParse(hotelNo, out hotelNoResult);
+        //    int hotelNoResult;
+        //    bool hotelNoOk = Int32.TryParse(hotelNo, out hotelNoResult);
 
-            RoomType roomTypeResult;
-            bool roomTypeOk = Enum.TryParse(roomType, out roomTypeResult);
+        //    RoomType roomTypeResult;
+        //    bool roomTypeOk = Enum.TryParse(roomType, out roomTypeResult);
 
-            int priceResult;
-            bool priceOK = Int32.TryParse(price, out priceResult);
+        //    int priceResult;
+        //    bool priceOK = Int32.TryParse(price, out priceResult);
 
-            bool isParsedOk = roomOk || hotelNoOk || roomTypeOk || priceOK;
+        //    bool isParsedOk = roomOk || hotelNoOk || roomTypeOk || priceOK;
 
-            if (isParsedOk)
-            {
-                myParsedRoom.RoomNo = roomNoResult;
-                myParsedRoom.HotelNo = hotelNoResult;
-                myParsedRoom.Types = roomTypeResult;
-                myParsedRoom.Price = priceResult;
-            }
-            room = myParsedRoom;
+        //    if (isParsedOk)
+        //    {
+        //        myParsedRoom.RoomNo = roomNoResult;
+        //        myParsedRoom.HotelNo = hotelNoResult;
+        //        myParsedRoom.Types = roomTypeResult;
+        //        myParsedRoom.Price = priceResult;
+        //    }
+        //    room = myParsedRoom;
 
-            return isParsedOk;
-        }
+        //    return isParsedOk;
+        //}
 
         /// <summary>
         /// a method that takes a string of length 12
@@ -80,9 +80,9 @@ namespace HotelFlatFilesApp
             var myParsedRoom = new Room();
 
             string roomNo = input.Substring(0, 3);
-            string hotelNo = input.Substring(3, 3);
+            string hotelNo = input.Substring(2, 3);
             string roomType = input.Substring(6, 1);
-            string price = input.Substring(7, 5);
+            string price = input.Substring(6, 5);
 
             int roomNoResult;
             bool roomOk = Int32.TryParse(roomNo, out roomNoResult);
@@ -95,8 +95,10 @@ namespace HotelFlatFilesApp
 
             int priceResult;
             bool priceOK = Int32.TryParse(price, out priceResult);
+            // bool priceOK = Int32.TryParse(price28, out priceResult28);
+            priceResult += 28;//is that really necessary ??
 
-            bool isParsedOk = roomOk && hotelNoOk && roomTypeOk && priceOK;
+            bool isParsedOk = roomOk || hotelNoOk || roomTypeOk || priceOK;
 
             if (isParsedOk)
             {
