@@ -57,11 +57,14 @@ namespace HotelFlatFilesApp
             flatBookingData.Add("004001299400101115121115");
             flatBookingData.Add("005002456210121115121115");
             flatBookingData.Add("006002646310101115121115");
-            //with error flatBookingData.Add("007002534210121016310216");
-            //with error flatBookingData.Add("00700l534210121115171115");
+            flatBookingData.Add("007002534210121016310216");//with error 
+            flatBookingData.Add("00700l534210121115171115");//with error 
 
             var errorRoomData = new List<string>();
             var errorBookingData = new List<string>();
+
+            var roomList = new List<Room>();
+            var bookingList = new List<Booking>();
 
             //Start to code here
 
@@ -96,6 +99,21 @@ namespace HotelFlatFilesApp
             //create a method that takes a textstring and parse the data to a Room Object
             //Remember to look at the recordlayout , use the method Substring to cut the textsstring in pieces
             //put the result in a List<Room>
+
+            foreach (var textline in flatRoomData)
+            {
+                var Room = new Room();
+                bool OK =  Room.TryParse(textline);
+
+                if (OK)
+                {
+                    roomList.Add(Room);
+                }
+                else
+                {
+                    errorRoomData.Add(textline);
+                }
+            }
 
             //exercise 7
             //create a method that takes a textstring and parse the data to a Booking Object
