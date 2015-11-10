@@ -38,8 +38,8 @@ namespace HotelFlatFilesApp
             flatRoomData.Add("110002300340");
             flatRoomData.Add("210002202500");
             flatRoomData.Add("310002200340");
-            //with error            flatRoomData.Add("310z02200340");
-            //with error            flatRoomData.Add("310002900340");
+            //flatRoomData.Add("310z02200340");//with error            
+            //flatRoomData.Add("310002900340");//with error            
 
             //Record layout Booking
             //1-3 BookingId
@@ -57,8 +57,8 @@ namespace HotelFlatFilesApp
             flatBookingData.Add("004001299400101115121115");
             flatBookingData.Add("005002456210121115121115");
             flatBookingData.Add("006002646310101115121115");
-            flatBookingData.Add("007002534210121016310216");//with error 
-            flatBookingData.Add("00700l534210121115171115");//with error 
+            //flatBookingData.Add("007002534210121016310216");//with error 
+            //flatBookingData.Add("00700l534210121115171115");//with error 
 
             var errorRoomData = new List<string>();
             var errorBookingData = new List<string>();
