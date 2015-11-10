@@ -120,6 +120,23 @@ namespace HotelFlatFilesApp
             //remember to look at the recordlayout
             //Put the result in a List<Booking> 
 
+            foreach (var line in flatBookingData)
+            {
+                var booking = new Booking();
+                bool OK = booking.TryParse(line);
+
+                if (OK)
+                {
+                    bookingList.Add(booking);
+                }
+                else
+                {
+                    errorBookingData.Add(line);
+                }
+
+
+            }
+
             //exercise 8
             //add data with error to the flatBookingdata and the flatRoomData
             //If a line has an error put the data in the error list 
